@@ -12,7 +12,8 @@ export default {
           enabled: false
         },
         intercom: {
-          enabled: true
+          enabled: true,
+          appId: "wn4z9z0y"
         },
         mesos: {
           "logging-strategy": "logrotate"

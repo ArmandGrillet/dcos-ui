@@ -22,7 +22,7 @@ describe("IntercomHooks", function() {
     describe("#pluginsConfigured", function() {
       it("appends scripts to the document head if plugin enabled", function() {
         global.analytics = { ready() {} };
-        IntercomHooks.initialize();
+        IntercomHooks.initialize({ appId: "id-123" });
         SDK.Hooks.doAction("pluginsConfigured");
         expect(DOMUtils.appendScript.calls.count()).toEqual(1);
       });
